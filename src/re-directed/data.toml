@@ -1,7 +1,7 @@
 url_base = "re-directed"
 transfer_url_base = "https://mango-serives.github.io/src/{url_base}/{domain}/{filename}"
 html_base = "<meta http-equiv=\"refresh\" content=\"0;url={url}\">"
-markdown_base = """<link href="http://github.com/yrgoldteeth/darkdowncss/raw/master/darkdown.css" rel="stylesheet"></link>
+markdown_base = """<link href="http://github.com/yrgoldteeth/darkdowncss/raw/master/darkdown.css" rel="stylesheet">
 # Link List
 
 | Domain | namespace | raw_url | transfer_url |
