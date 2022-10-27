@@ -1,4 +1,4 @@
-<link href="http://github.com/yrgoldteeth/darkdowncss/raw/master/darkdown.css" rel="stylesheet"></link>
+<link href="http://github.com/yrgoldteeth/darkdowncss/raw/master/darkdown.css" rel="stylesheet">
 # Link List
 
 | Domain | namespace | raw_url | transfer_url |
