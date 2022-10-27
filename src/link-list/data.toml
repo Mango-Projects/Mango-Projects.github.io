@@ -1,4 +1,4 @@
-transfer_url_base = "https://mango-projects.github.io/src/link-list/{domain}/{filename}"
+transfer_url_base = "https://mango-serives.github.io/src/link-list/{domain}/{filename}"
 url_base = "<meta http-equiv=\"refresh\" content=\"0;url={url}\">"
 markdown_base = """# Link List
 
