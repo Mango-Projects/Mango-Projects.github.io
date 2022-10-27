@@ -9,11 +9,11 @@ table_base = "| `{domain}` | `{namespace}` | [{raw_url}]({raw_url}) | [{transfer
 
 [RawOresProcessing-Datapack]
 "www.curseforge.com" = "/minecraft/texture-packs/raw-ores-processing-datapack"
-"www.mcmod.cn"       = "/class/7643.html"
+"www.mcmod.cn"       = "/class/7643"
 "www.github.com"     = "/Mango-Minecraft-Project/RawOresProcessing-Datapack"
 
 [WoolRecipes-Datapack]
 "www.curseforge.com" = "/minecraft/texture-packs/wool-recipes-datapack"
-"www.mcmod.cn"       = "/class/7623.html"
+"www.mcmod.cn"       = "/class/7623"
 "www.github.com"     = "/Mango-Minecraft-Project/WoolRecipes-Datapack"
 
