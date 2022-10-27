@@ -1,6 +1,7 @@
 transfer_url_base = "https://mango-serives.github.io/src/link-list/{domain}/{filename}"
 url_base = "<meta http-equiv=\"refresh\" content=\"0;url={url}\">"
-markdown_base = """# Link List
+markdown_base = """<link href="http://github.com/yrgoldteeth/darkdowncss/raw/master/darkdown.css" rel="stylesheet"></link>
+# Link List
 
 | Domain | namespace | raw_url | transfer_url |
 |--------|-----------|---------|--------------|
