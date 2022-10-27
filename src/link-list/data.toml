@@ -1,10 +1,11 @@
+transfer_url_base = "https://mango-projects.github.io/src/link-list/{url}"
 url_base = "<meta http-equiv=\"refresh\" content=\"0;url={url}\">"
 markdown_base = """# Link List
 
-| Domain                       | namespace         | url                                              |
-|------------------------------|-------------------|--------------------------------------------------|
+| Domain | namespace | raw_url | transfer_url |
+|--------|-----------|---------|--------------|
 """
-table_base = "| `{domain}` | `{namespace}` | [{url}]({url}) |\n"
+table_base = "| `{domain}` | `{namespace}` | [{raw_url}]({raw_url}) | [{transfer_url}]({transfer_url}) |\n"
 
 [RawOresProcessing-Datapack]
 "www.curseforge.com" = "/minecraft/texture-packs/raw-ores-processing-datapack"
