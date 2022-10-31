@@ -25,9 +25,10 @@ table_base = "| `{domain}` | `{namespace}` | [{raw_url}]({raw_url}) | [{transfer
 "www.github.com"     = "/Mango-Minecraft-Project/MoreCreateRecipes-Datapack"
 
 [AboutMango]
+"www.github.com"     = "/EvanHsieh0415"
+"www.reddit.com"     = "/user/No-Shock9432"
 "www.youtube.com"    = "/user/Evan6201"
 "www.twitch.tv"      = "/cl_mango"
 "www.odysee.com"     = "/@芒果布丁"
 "www.facebook.com"   = "/EvanMango999"
 "www.twitter.com"    = "/YTMango1"
-"www.github.com"     = "/EvanHsieh0415"
