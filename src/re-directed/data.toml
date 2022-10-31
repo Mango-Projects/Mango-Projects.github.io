@@ -19,3 +19,15 @@ table_base = "| `{domain}` | `{namespace}` | [{raw_url}]({raw_url}) | [{transfer
 "www.mcmod.cn"       = "/class/7623"
 "www.github.com"     = "/Mango-Minecraft-Project/WoolRecipes-Datapack"
 
+[MoreCreateRecipes-Datapack]
+"www.curseforge.com" = "/minecraft/texture-packs/morecreaterecipes-datapack"
+"www.mcmod.cn"       = "/class/7992"
+"www.github.com"     = "/Mango-Minecraft-Project/MoreCreateRecipes-Datapack"
+
+[AboutMango]
+"www.youtube.com"    = "/user/Evan6201"
+"www.twitch.tv"      = "/cl_mango"
+"www.odysee.com"     = "/@芒果布丁"
+"www.facebook.com"   = "/EvanMango999"
+"www.twitter.com"    = "/YTMango1"
+"www.github.com"     = "/EvanHsieh0415"
