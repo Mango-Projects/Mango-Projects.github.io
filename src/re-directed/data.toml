@@ -9,7 +9,7 @@ markdown_base = """# Link List
 | Namespace |   Path    | Original URL | Transfer URL |
 |-----------|-----------|--------------|--------------|
 """
-table_base = "| `{namespace}` | `{path}` | `{original_url}` | [{transfer_url}]({transfer_url} |"
+table_base = "| `{namespace}` | `{path}` | `{original_url}` | [{transfer_url}]({transfer_url}) |"
 
 [url_mapping]
 # source code

@@ -1,56 +1,54 @@
 import tomllib
 from pathlib import Path
-import re
-
-import pretty_errors
-
-import json
-
-
-def pprint(obj):
-    print(json.dumps(obj, ensure_ascii=False, indent=2))
 
 
 CURRENT_PATH = Path(__file__).parent
 
-with open(CURRENT_PATH / "data.toml", "rb") as file:
-    _data = tomllib.load(file)
+_data = tomllib.loads((CURRENT_PATH / "data.toml").read_text(encoding="utf8"))
+TRANSFER_URL_BASE = _data["transfer_url_base"]
+HTML_BASE = _data["html_base"]
+MARKDOWN_BASE = _data["markdown_base"]
+TABLE_BASE = _data["table_base"]
+URL_MAPPING = _data["url_mapping"]
 
-    TRANSFER_URL_BASE = _data["transfer_url_base"]
-    HTML_BASE = _data["html_base"]
-    MARKDOWN_BASE = _data["markdown_base"]
-    TABLE_BASE = _data["table_base"]
-    URL_MAPPING = _data["url_mapping"]
+URL = tomllib.loads((CURRENT_PATH / "url.toml").read_text(encoding="utf8"))
 
-with open(CURRENT_PATH / "url.toml", "rb") as file:
-    URL = tomllib.load(file)
+
+def process_urls(process_func):
+    for namespace, data in URL.items():
+        for url_type, path in data.items():
+            process_func(namespace, url_type, path)
 
 
 def generate_markdown():
     lines = []
-    for namespace, data in URL.items():
-        for url_type, path in data.items():
-            lines.append(
-                TABLE_BASE.format(
-                    namespace=namespace,
-                    path=path,
-                    original_url=URL_MAPPING[url_type] + path,
-                    transfer_url=TRANSFER_URL_BASE.format(
-                        namespace=namespace, type=url_type
-                    ),
-                )
+
+    def process_func(namespace: str, url_type: str, path: str):
+        lines.append(
+            TABLE_BASE.format(
+                namespace=namespace,
+                path=path,
+                original_url=f"{URL_MAPPING[url_type]}{path}",
+                transfer_url=f"{TRANSFER_URL_BASE.format(namespace=namespace, type=url_type)}",
             )
-    with open(CURRENT_PATH / "index.md", "w", encoding="utf8") as file:
-        file.write(MARKDOWN_BASE + "\n".join(lines))
+        )
+
+    process_urls(process_func)
+    (CURRENT_PATH / "index.md").write_text(
+        MARKDOWN_BASE + "\n".join(lines), encoding="utf8"
+    )
 
 
 def generate_html():
-    for namespace, data in URL.items():
+
+    def process_func(namespace: str, url_type: str, path: str):
         namespace_path = CURRENT_PATH / namespace
         namespace_path.mkdir(exist_ok=True)
-        for url_type, path in data.items():
-            with open(namespace_path / f"{url_type}.html", "w") as file:
-                file.write(HTML_BASE.format(url=URL_MAPPING[url_type] + path))
+        (namespace_path / f"{url_type}.html").write_text(
+            HTML_BASE.format(url=f"{URL_MAPPING[url_type]}{path}"), encoding="utf8"
+        )
+
+    process_urls(process_func)
 
 
 def main():
