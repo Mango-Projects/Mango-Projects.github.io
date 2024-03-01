@@ -32,21 +32,25 @@ def generate_markdown():
         for url_type, path in data.items():
             lines.append(
                 TABLE_BASE.format(
-                    **{
-                        "namespace": namespace,
-                        "path": path,
-                        "original_url": URL_MAPPING[url_type] + path,
-                        "transfer_url": TRANSFER_URL_BASE.format(
-                            **{"namespace": namespace, "type": url_type}
-                        ),
-                    }
+                    namespace=namespace,
+                    path=path,
+                    original_url=URL_MAPPING[url_type] + path,
+                    transfer_url=TRANSFER_URL_BASE.format(
+                        namespace=namespace, type=url_type
+                    ),
                 )
             )
     with open(CURRENT_PATH / "index.md", "w", encoding="utf8") as file:
         file.write(MARKDOWN_BASE + "\n".join(lines))
 
 
-def generate_html(): ...
+def generate_html():
+    for namespace, data in URL.items():
+        namespace_path = CURRENT_PATH / namespace
+        namespace_path.mkdir(exist_ok=True)
+        for url_type, path in data.items():
+            with open(namespace_path / f"{url_type}.html", "w") as file:
+                file.write(HTML_BASE.format(url=URL_MAPPING[url_type] + path))
 
 
 def main():
