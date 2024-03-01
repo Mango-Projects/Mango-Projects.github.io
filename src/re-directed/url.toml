@@ -1,0 +1,23 @@
+[RawOresProcessing-Datapack]
+curseforge = "/minecraft/texture-packs/raw-ores-processing-datapack"
+mcmod = "/class/7643"
+github = "/Mango-Minecraft-Project/RawOresProcessing-Datapack"
+
+[WoolRecipes-Datapack]
+curseforge = "/minecraft/texture-packs/wool-recipes-datapack"
+mcmod = "/class/7623"
+github = "/Mango-Minecraft-Project/WoolRecipes-Datapack"
+
+[MoreCreateRecipes-Datapack]
+curseforge = "/minecraft/texture-packs/morecreaterecipes-datapack"
+mcmod = "/class/7992"
+github = "/Mango-Minecraft-Project/MoreCreateRecipes-Datapack"
+
+[AboutMango]
+github = "/EvanHsieh0415"
+reddit = "/user/No-Shock9432"
+youtube = "/user/Evan6201"
+twitch = "/cl_mango"
+odysee = "/@芒果布丁"
+facebook = "/EvanMango999"
+twitter = "/YTMango1"

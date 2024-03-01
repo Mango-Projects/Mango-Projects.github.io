@@ -1,34 +1,27 @@
-url_base = "re-directed"
-transfer_url_base = "https://mango-services.github.io/src/{url_base}/{domain}/{filename}"
+transfer_url_base = "https://mango-services.github.io/src/re-directed/{namespace}/{type}"
+
+# html
 html_base = "<meta http-equiv=\"refresh\" content=\"0;url={url}\">"
-markdown_base = """<link href="http://github.com/yrgoldteeth/darkdowncss/raw/master/darkdown.css" rel="stylesheet">
-# Link List
 
-| Domain | namespace | raw_url | transfer_url |
-|--------|-----------|---------|--------------|
+# markdown
+markdown_base = """# Link List
+
+| Namespace |   Path    | Original URL | Transfer URL |
+|-----------|-----------|--------------|--------------|
 """
-table_base = "| `{domain}` | `{namespace}` | [{raw_url}]({raw_url}) | [{transfer_url}]({transfer_url}) |\n"
+table_base = "| `{namespace}` | `{path}` | `{original_url}` | {transfer_url} |"
 
-[RawOresProcessing-Datapack]
-"www.curseforge.com" = "/minecraft/texture-packs/raw-ores-processing-datapack"
-"www.mcmod.cn"       = "/class/7643"
-"www.github.com"     = "/Mango-Minecraft-Project/RawOresProcessing-Datapack"
-
-[WoolRecipes-Datapack]
-"www.curseforge.com" = "/minecraft/texture-packs/wool-recipes-datapack"
-"www.mcmod.cn"       = "/class/7623"
-"www.github.com"     = "/Mango-Minecraft-Project/WoolRecipes-Datapack"
-
-[MoreCreateRecipes-Datapack]
-"www.curseforge.com" = "/minecraft/texture-packs/morecreaterecipes-datapack"
-"www.mcmod.cn"       = "/class/7992"
-"www.github.com"     = "/Mango-Minecraft-Project/MoreCreateRecipes-Datapack"
-
-[AboutMango]
-"www.github.com"     = "/EvanHsieh0415"
-"www.reddit.com"     = "/user/No-Shock9432"
-"www.youtube.com"    = "/user/Evan6201"
-"www.twitch.tv"      = "/cl_mango"
-"www.odysee.com"     = "/@芒果布丁"
-"www.facebook.com"   = "/EvanMango999"
-"www.twitter.com"    = "/YTMango1"
+[url_mapping]
+# source code
+github = "https://www.github.com"
+# minecraft mod publish
+curseforge = "https://www.curseforge.com"
+modrinth = "https://www.modrinth.com/"
+mcmod = "https://www.mcmod.cn/"
+# social media
+youtube = "https://www.youtube.com/"
+reddit = "https://www.reddit.com/"
+twitch = "https://www.twitch.tv/"
+odysee = "https://www.odysee.com/"
+facebook = "https://www.facebook.com/"
+twitter = "https://www.twitter.com/"
